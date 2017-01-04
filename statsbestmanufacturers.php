@@ -50,36 +50,36 @@ class statsbestmanufacturers extends ModuleGrid
 
         $this->default_sort_column = 'sales';
         $this->default_sort_direction = 'DESC';
-        $this->empty_message = $this->l('Empty recordset returned.');
-        $this->paging_message = sprintf($this->l('Displaying %1$s of %2$s'), '{0} - {1}', '{2}');
+        $this->empty_message = $this->trans('Empty recordset returned.', array(), 'Admin.Notifications.Info');
+        $this->paging_message = $this->trans('Displaying %1$s of %2$s', array('{0} - {1}', '{2}'), 'Admin.Global');
 
         $this->columns = array(
             array(
                 'id' => 'name',
-                'header' => $this->l('Name'),
+                'header' => $this->trans('Name', array(), 'Admin.Global'),
                 'dataIndex' => 'name',
                 'align' => 'left',
                 'width' => 200
             ),
             array(
                 'id' => 'quantity',
-                'header' => $this->l('Quantity sold'),
+                'header' => $this->trans('Quantity sold', array(), 'Admin.Global'),
                 'dataIndex' => 'quantity',
                 'width' => 60,
                 'align' => 'right'
             ),
             array(
                 'id' => 'sales',
-                'header' => $this->l('Total paid'),
+                'header' => $this->trans('Total paid', array(), 'Modules.Statsbestmanufacturers.Admin'),
                 'dataIndex' => 'sales',
                 'width' => 60,
                 'align' => 'right'
             )
         );
 
-        $this->displayName = $this->l('Best manufacturers');
-        $this->description = $this->l('Adds a list of the best manufacturers to the Stats dashboard.');
-        $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
+        $this->displayName = $this->trans('Best brands', array(), 'Modules.Statsbestmanufacturers.Admin');
+        $this->description = $this->trans('Adds a list of the best brands to the Stats dashboard.', array(), 'Modules.Statsbestmanufacturers.Admin');
+        $this->ps_versions_compliancy = array('min' => '1.7.0.0', 'max' => _PS_VERSION_);
     }
 
     public function install()
@@ -107,7 +107,7 @@ class statsbestmanufacturers extends ModuleGrid
 		<fieldset>
 			<legend><img alt="'.$this->name.'" src="../modules/'.$this->name.'/logo.gif" /> '.$this->displayName.'</legend>
 			'.$this->engine($engine_params).'<br />
-			<a href="'.Tools::safeOutput($_SERVER['REQUEST_URI'].'&export=1').'"><img alt="asterisk" src="../img/admin/asterisk.gif" />'.$this->l('CSV Export').'</a>
+			<a href="'.Tools::safeOutput($_SERVER['REQUEST_URI'].'&export=1').'"><img alt="asterisk" src="../img/admin/asterisk.gif" />'.$this->trans('CSV Export', array(), 'Admin.Global').'</a>
 		</fieldset>
 		';
 
