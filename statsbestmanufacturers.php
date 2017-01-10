@@ -79,7 +79,7 @@ class statsbestmanufacturers extends ModuleGrid
 
         $this->displayName = $this->trans('Best brands', array(), 'Modules.Statsbestmanufacturers.Admin');
         $this->description = $this->trans('Adds a list of the best brands to the Stats dashboard.', array(), 'Modules.Statsbestmanufacturers.Admin');
-        $this->ps_versions_compliancy = array('min' => '1.7.0.0', 'max' => _PS_VERSION_);
+        $this->ps_versions_compliancy = array('min' => '1.7.1.0', 'max' => _PS_VERSION_);
     }
 
     public function install()
