@@ -2,7 +2,7 @@
 
 ## About
 
-Adds a list of the best manufacturers to the Stats dashboard.
+Enrich your stats, add a list of the best selling brands to the dashboard.
 
 ## Reporting issues
 
