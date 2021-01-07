@@ -133,7 +133,7 @@ class statsbestmanufacturers extends ModuleGrid
     {
         $this->_totalCount = $this->getTotalCount();
 
-        $this->query = 'SELECT m.name, SUM(od.product_quantity) as quantity, ROUND(SUM(od.product_quantity * od.product_price) / c.conversion_rate, 2) as sales
+        $this->query = 'SELECT m.name, SUM(od.product_quantity) as quantity, ROUND(SUM(od.product_quantity * od.unit_price_tax_excl) / c.conversion_rate, 2) as sales
 				FROM '._DB_PREFIX_.'order_detail od
 				LEFT JOIN '._DB_PREFIX_.'product p ON (p.id_product = od.product_id)
 				LEFT JOIN '._DB_PREFIX_.'orders o ON (o.id_order = od.id_order)
