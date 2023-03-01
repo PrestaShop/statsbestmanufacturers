@@ -57,7 +57,7 @@ class statsbestmanufacturers extends ModuleGrid
                 'id' => 'name',
                 'header' => $this->trans('Name', [], 'Admin.Global'),
                 'dataIndex' => 'name',
-                'align' => 'left',
+                'align' => 'center',
                 'width' => 200,
             ],
             [
@@ -65,14 +65,14 @@ class statsbestmanufacturers extends ModuleGrid
                 'header' => $this->trans('Quantity sold', [], 'Admin.Global'),
                 'dataIndex' => 'quantity',
                 'width' => 60,
-                'align' => 'right',
+                'align' => 'center',
             ],
             [
                 'id' => 'sales',
                 'header' => $this->trans('Total paid', [], 'Modules.Statsbestmanufacturers.Admin'),
                 'dataIndex' => 'sales',
                 'width' => 60,
-                'align' => 'right',
+                'align' => 'center',
             ],
         ];
 
