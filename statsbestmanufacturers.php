@@ -57,7 +57,7 @@ class statsbestmanufacturers extends ModuleGrid
                 'id' => 'name',
                 'header' => $this->trans('Name', [], 'Admin.Global'),
                 'dataIndex' => 'name',
-                'align' => 'left',
+                'align' => 'center',
                 'width' => 200,
             ],
             [
@@ -65,14 +65,14 @@ class statsbestmanufacturers extends ModuleGrid
                 'header' => $this->trans('Quantity sold', [], 'Admin.Global'),
                 'dataIndex' => 'quantity',
                 'width' => 60,
-                'align' => 'right',
+                'align' => 'center',
             ],
             [
                 'id' => 'sales',
                 'header' => $this->trans('Total paid', [], 'Modules.Statsbestmanufacturers.Admin'),
                 'dataIndex' => 'sales',
                 'width' => 60,
-                'align' => 'right',
+                'align' => 'center',
             ],
         ];
 
@@ -98,17 +98,17 @@ class statsbestmanufacturers extends ModuleGrid
             'pagingMessage' => $this->paging_message,
         ];
 
-        if (Tools::getValue('export')) {
+        if (Tools::getValue('export') == 1) {
             $this->csvExport($engine_params);
         }
-
         $this->html = '
-		<fieldset>
-			<legend><img alt="' . $this->name . '" src="../modules/' . $this->name . '/logo.gif" /> ' . $this->displayName . '</legend>
-			' . $this->engine($engine_params) . '<br />
-			<a href="' . Tools::safeOutput($_SERVER['REQUEST_URI'] . '&export=1') . '"><img alt="asterisk" src="../img/admin/asterisk.gif" />' . $this->trans('CSV Export', [], 'Admin.Global') . '</a>
-		</fieldset>
-		';
+			<div class="panel-heading">
+				' . $this->displayName . '
+			</div>
+			' . $this->engine($engine_params) . '
+			<a class="btn btn-default export-csv" href="' . Tools::safeOutput($_SERVER['REQUEST_URI'] . '&export=1') . '">
+				<i class="icon-cloud-upload"></i> ' . $this->trans('CSV Export', [], 'Admin.Global') . '
+			</a>';
 
         return $this->html;
     }
