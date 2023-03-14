@@ -77,7 +77,7 @@ class statsbestmanufacturers extends ModuleGrid
         ];
 
         $this->displayName = $this->trans('Best brands', [], 'Modules.Statsbestmanufacturers.Admin');
-        $this->description = $this->trans('Enrich your stats, add a list of the best selling brands to the dashboard.', [], 'Modules.Statsbestmanufacturers.Admin');
+        $this->description = $this->trans('Enrich your stats: add a list of the best-selling brands to your dashboard.', [], 'Modules.Statsbestmanufacturers.Admin');
         $this->ps_versions_compliancy = ['min' => '1.7.1.0', 'max' => _PS_VERSION_];
     }
 
