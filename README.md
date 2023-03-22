@@ -2,7 +2,7 @@
 
 ## About
 
-Enrich your stats, add a list of the best selling brands to the dashboard.
+Enrich your stats: add a list of the best-selling brands to your dashboard.
 
 ## Reporting issues
 
