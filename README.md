@@ -8,6 +8,12 @@ Enrich your stats: add a list of the best-selling brands to your dashboard.
 
 PrestaShop: `1.7.1.0` or later
 
+## How to test
+
+If module is enabled, check that the list of the best-selling brands is displayed in dashboard.
+
+Link to test scenario : https://build.prestashop-project.org/test-scenarios/scenarios/modules/statsbestmanufacturers.html
+
 ## Reporting issues
 
 You can report issues with this module in the main PrestaShop repository. [Click here to report an issue][report-issue]. 
